@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bg-gray-300">
+    {% comment  %}
+        
+  <h1 class="text-red-500">
+    {% for task in tasks %}
+    {{task.title}} <br>
+    {{task.description}} <br>
+    {{task.due_date}} <br>
+    {{task.due_time}} <br>
+{% endfor %}
+</h1>
+{% endcomment %}
+<h1 class="flex flex-col gap-3 p-3 items-center"> <span class="text-white bg-blue-600  rounded-2xl p-3 "> Tasks For Today </span> </h1>
+
+{% for task in tasks %}
+
+<div class="flex flex-col gap-3 p-3 items-center">
+    
+<div class="bg-white w-[355px] h-[168px] rounded-lg p-3">
+    <div class="flex flex-row justify-between items-center">
+    <p class="text-green-500 text-xl font-bold {% if task.completed %}
+    line-through
+ {% endif %} ">{{task.title}} <a href="{% url 'update_task' task.id  %}" ><i class='bx bx-edit-alt bx-sm text-red-500' ></i></a></p> 
+
+
+
+ <a href="{% url 'toggle_complete' task.id %}"><i class='bx-sm {% if task.completed %}
+ text-green-500 {% else %} text-blue-500
+ {% endif %} bx bx-check-circle'></i></a> </div>
+    <p class="text-gray-500">{{task.description}}</p>
+    <hr>
+    <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-row"><p class="text-green-500 mr-3" >{{task.due_date}}</p>
+        <p class="text-gray-500">{{task.due_time}}</p></div>  <a href="{% url 'task_delete' task.id %}">
+        <i class='bx bx-trash bx-sm text-red-500'></i> </a> </div>
+
+</div>
+
+</div>
+</a>
+{% endfor %}
+<h3 class="flex flex-col gap-3 p-3 items-center "><a class="px-4 py-3 bg-blue-600 rounded-2xl  text-white no-underline items-center " href="/insert/{{i.id}}"> <i class='bx bx-plus-circle pr-3'></i> Add new Task</a> </h3>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
