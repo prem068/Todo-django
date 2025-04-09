@@ -18,7 +18,7 @@ backend/ ├── app/ │ ├── admin.py │ ├── apps.py │ ├─�
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/prem068/Todo-django
    cd backend
 
    ```
