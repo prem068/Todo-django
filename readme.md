@@ -19,7 +19,8 @@ backend/ ├── app/ │ ├── admin.py │ ├── apps.py │ ├─�
 1. Clone the repository:
    ```bash
    git clone https://github.com/prem068/Todo-django
-   cd backend
+   cd Todo-django-main
+   py manage.py runserver
 
    ```
 
@@ -29,7 +30,7 @@ Install the required dependencies:
 
 Run migrations to set up the database:
 
-Start the development server:
+Start the development server: 
 
 Open your browser and navigate to http://127.0.0.1:8000/ to access the app.
 
