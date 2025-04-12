@@ -46,13 +46,10 @@ backend/
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/prem068/Todo-django
-<<<<<<< HEAD
    cd backend
-=======
-   cd Todo-django-main
    py manage.py runserver
 
->>>>>>> 64828c3ceb8eb8353d10bb849ed317d0ff0df61d
+
    ```
 
 2. **Create a virtual environment and activate it**:
@@ -69,15 +66,14 @@ backend/
 4. **Start the development server**:
    ```bash
    python manage.py runserver
-   
+   ```
 
-<<<<<<< HEAD
 6. Open your browser and navigate to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) to access the app.
-=======
+
 Start the development server: 
 
 Open your browser and navigate to http://127.0.0.1:8000/ to access the app.
->>>>>>> 64828c3ceb8eb8353d10bb849ed317d0ff0df61d
+
 
 ## Usage
 
