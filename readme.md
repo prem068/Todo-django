@@ -47,9 +47,6 @@ backend/
    ```bash
    git clone https://github.com/prem068/Todo-django
    cd backend
-   py manage.py runserver
-
-
    ```
 
 2. **Create a virtual environment and activate it**:
